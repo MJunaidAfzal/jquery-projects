@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+        <div class="container">
+            <p class="colorbtn">My Name Is M.Junaid Afzal</p>
+            <p class="colorbtn">I am The Student Of 10th</p>
+            <p>Today i am doing jquery home work.</p>
+            <button id="redbtn" class="btn btn-danger">Red Button</button>
+            <button id="greenbtn" class="btn btn-success">Green Button</button>
+        </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#redbtn").click(function(){
+                $(".colorbtn").css("color","red");
+            });
+            $("#greenbtn").click(function(){
+                $(".colorbtn").css("color","green");
+        });
+    });
+    </script>
+</body>
+</html>

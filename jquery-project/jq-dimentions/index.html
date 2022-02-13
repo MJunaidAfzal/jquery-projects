@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>JQUERY DIMENTION</title>
+</head>
+<body style="padding: 25px;background-color: rgb(218, 187, 177);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div  class="card">
+                        <div class="card-header">
+                            <h2>JQUERY EMPTY()</h2>
+                        </div>
+                        <div id="div1" class="card body " style="padding: 15px;">
+                            <label for="first name ">First Name</label>
+                            <input type="text" class="form-control">
+                            <button id="btn1" class="btn btn-info mt-3">Click To Empty The Card Body Element</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div  class="card">
+                        <div id="div2" class="card-header">
+                            <h2>JQUERY REMOVE()</h2>
+                        </div>
+                        <div  class="card body " style="padding: 15px;">
+                            <label for="Last name ">Last Name</label>
+                            <input type="text" class="form-control">
+                            <button id="btn2" class="btn btn-success mt-3">Click To Remove The Card Header Element</button>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="text-center mt-3">JQUERY DIMENSIONS</h2>
+                <div class="col-md-6 mt-5">
+                <h4>SIMPLE HEIGHT OR WIDTH</h4>
+                <div id="div3"  style="background-color: lightgreen; border: 10px groove green; padding: 20px;color: darkblue;font-size: 25px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; height: 250px;width: 350px;margin-top: 30px;"></div>
+                <button id="btn3" class="btn btn-success mt-3">Click To Show The Height Or width</button>
+            </div>
+            <div class="col-md-6 mt-5">
+                <h4>INNER HEIGHT OR WIDTH</h4>
+                <div id="div4"  style="background-color: lightblue; border: 10px groove blue; padding: 20px;color: green;font-size: 25px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; height: 250px;width: 350px;margin-top: 30px;"></div>
+                <button id="btn4" class="btn btn-primary mt-3">Click To Show The Inner Height Or width</button>
+            </div><br><br>
+            <div class="col-md-12" style="margin-left: 150px;margin-top: 50px;">
+            <h4 style="margin-left: 180px;" >OUTER HEIGHT OR WIDTH</h4>
+            <div id="div5"  style="background-color: lightgoldenrodyellow; border: 10px groove gold; padding: 20px;color: darkred;font-size: 25px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; height: 250px;width: 650px;margin-top: 30px;"></div>
+            <button id="btn5" class="btn btn-warning mt-3">Click To Show The Outer Height Or width</button>
+        </div>
+            </div>
+
+            
+        </div>
+
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#div1").empty();
+            });
+            $("#btn2").click(function(){
+                $("#div2").remove();
+            });
+            $("#btn3").click(function(){
+            var txt = "";
+            txt += "Width of div: " + $("#div3").width() + "</br>";
+            txt += "Height of div: " + $("#div3").height();
+                $("#div3").html(txt);
+            });
+            $("#btn4").click(function(){
+             var txt = "";
+             txt += "Inner width of div: " + $("#div4").innerWidth() + "</br>";
+             txt += "Inner height of div: " + $("#div4").innerHeight();
+                $("#div4").html(txt);
+            });
+            $("#btn5").click(function(){
+             var txt = "";
+             txt += "Outer width of div: " + $("#div5").outerWidth() + "</br>";
+             txt += "Outer height of div: " + $("#div5").outerHeight();
+                $("#div5").html(txt);
+            });
+        });
+    </script>
+</body>
+</html>

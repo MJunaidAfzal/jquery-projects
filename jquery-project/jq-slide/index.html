@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>jquery slide</title>
+</head>
+<body style="background-color: lightslategray;">
+        <h1 class="mt-5" style="color: white; text-align: center;font-family: Arial, Helvetica, sans-serif;">SLIDE DOWN()</h1>    
+        <div class="container" style="  margin-top: 50px; padding-top: 5px;text-align: center;background-color: gold;border: 3px solid white;border-radius: 5px;">
+            <p id="hello" style="font-size: 25px;color: white;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >Click to Slide down panel</p>
+            <p id="world" style="padding: 40px;display: none;font-size: 30px;color: white;font-family: Arial, Helvetica, sans-serif;">Hello World</p>
+        </div>
+
+        <h1 class="mt-5" style="color: white; text-align: center;font-family: Arial, Helvetica, sans-serif;">SLIDE UP()</h1>    
+        <div class="container" style="  margin-top: 50px; padding-top: 5px;text-align: center;background-color: gold;border: 3px solid white;border-radius: 5px;">
+            <p id="hello1" style="font-size: 25px;color: white;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >Click to Slide up panel</p>
+            <p id="world1" style="padding: 40px;font-size: 30px;color: white;font-family: Arial, Helvetica, sans-serif;">Hello World</p>
+        </div>
+
+        <h1 class="mt-5" style="color: white; text-align: center;font-family: Arial, Helvetica, sans-serif;">SLIDE TOGGLE()</h1>    
+        <div class="container" style="  margin-top: 50px; padding-top: 5px;text-align: center;background-color: gold;border: 3px solid white;border-radius: 5px;">
+            <p id="hello2" style="font-size: 25px;color: white;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >Click to Slide the panel down or up</p>
+            <p id="world2" style="padding: 40px;display: none;font-size: 30px;color: white;font-family: Arial, Helvetica, sans-serif;">Hello World</p>
+        </div>
+
+        
+
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hello").click(function(){
+                $("#world").slideDown("slow");
+            });
+        });
+        $(document).ready(function(){
+            $("#hello1").click(function(){
+                $("#world1").slideUp("slow");
+            });
+        });
+        $(document).ready(function(){
+            $("#hello2").click(function(){
+                $("#world2").slideToggle("slow");
+            });
+        });
+    </script>
+</body>
+</html>

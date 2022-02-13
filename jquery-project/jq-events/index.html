@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>jquery events</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mt-5 shadow-lg card" style="height: 312px;">
+                    <div class="text-info card-header">
+                        <h3>press paragraph to hide them</h3>
+                    </div>
+                    <div class="text-success card-body">
+                        <p class="pa">my name is junaid</p>
+                        <p class="pa">i am student of 10th</p>
+                        <p class="pa">today i am working jquery home work</p>
+                    </div>
+                    <div class="card-footer">
+                        <i class="text-secondary">agar ap in paragraph per single click karen ge to ye invisible ho jayenge</i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-5 shadow-lg card" style="height: 312px;">
+                    <div class="text-info card-header">
+                        <h3>press paragraph on double time to hide them</h3>
+                    </div>
+                    <div class="text-success card-body">
+                        <p class="s">my name is junaid</p>
+                        <p class="s">i am student of 10th</p>
+                        <p class="s">today i am working jquery home work</p>
+                    </div>
+                    <div class="card-footer">
+                        <i class="text-secondary">agar ap in paragraph per double click karen ge to ye invisible ho jayenge</i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-5 shadow-lg card" style="height: 312px;">
+                    <div class="text-info card-header">
+                        <h3>cursor on paragraph</h3>
+                    </div>
+                    <div class="text-success card-body">
+                        <p id="p1">enter this paragraph 1</p>
+                        
+                    </div>
+                    <div class="card-footer">
+                        <i class="text-secondary">agar ap apna cursor paragrph pe le ker jayenge to ye ap ko aik notification de ga</i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-5 shadow-lg card" style="height: 312px;">
+                    <div class="text-info card-header">
+                        <h3>cursor up on paragraph</h3>
+                    </div>
+                    <div class="text-success card-body">
+                        <p id="p2">enter this paragraph 2</p>
+                        
+                    </div>
+                    <div class="card-footer">
+                        <i class="text-secondary">agar ap apna cursor paragraph ke uper le jange or mouse ke kisis bhi button ko click karenge to ye ai notification dega</i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-5 shadow-lg card" style="height: 312px;">
+                    <div class="text-info card-header">
+                        <h3>label and input</h3>
+                    </div>
+                    <div class="text-success card-body">
+                       <label for="name">name</label>
+                       <input type="text">
+                       <label for="e-mail">e-mail</label>
+                       <input type="text">
+                    </div>
+                    <div class="card-footer">
+                        <i class="text-secondary">agar ap in paragraph per single click karen ge to ye invisible ho jayenge</i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-5 shadow-lg card" style="height: 312px;">
+                    <div class="text-info card-header">
+                        <h3>cursor leave on paragraph</h3>
+                    </div>
+                    <div class="text-success card-body">
+                        <p id="p3">enter this paragraph 3</p>
+                        
+                    </div>
+                    <div class="card-footer">
+                        <i class="text-secondary">agar ap apna cursor paragraph se hataenge to ye ap k aik notification de ga</i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-5 shadow-lg card" style="height: 312px;">
+                    <div class="text-info card-header">
+                        <h3>cursor down on paragraph</h3>
+                    </div>
+                    <div class="text-success card-body">
+                        <h3 id="h3">enter this heading 3</h3>
+                        
+                    </div>
+                    <div class="card-footer">
+                        <i class="text-secondary">agar ap apna cursor heading ke niche le ke jayenge or apne mouse ke kisi bhi button ko click karnge to ye apko notification dega</i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mt-5 shadow-lg card" style="height: 312px;">
+                    <div class="text-info card-header">
+                        <h3>multiple events method</h3>
+                    </div>
+                    <div class="text-success card-body">
+                        <h4>click or move the mouse pointer over this paragraph</h4>
+                        
+                    </div>
+                    <div class="card-footer">
+                        <i class="text-secondary">agar ap apna cursor heading pe le ke jayenge to ye iska color change kar de ga. jab ap apna cursor hatange to dobara color change kar de ga</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".pa").click(function(){
+                $(this).hide();
+            });
+            $(".s").dblclick(function(){
+                $(this).hide();
+            });
+            $("#p1").mouseenter(function(){
+                alert("you enter p1!")
+            });
+            $("#p3").mouseleave(function(){
+                alert("you enter p3!")
+            });
+            $("#h3").mouseenter(function(){
+                alert("you enter h3!")
+            });
+            $("#p2").mouseup(function(){
+                alert("your cursor is up on p2! ")
+            });
+            $("input").focus(function(){
+                $(this).css("background-color","pink")
+            });
+            $("input").blur(function(){
+                $(this).css("background-color","red")
+            });
+            $("h4").on({
+                mouseenter: function(){
+                    $(this).css("background-color" , "lightgrey")
+                },
+                mouseleave: function(){
+                    $(this).css("background-color" , "lightblue")
+                },
+                click: function(){
+                    $(this).css("background-color" , "lightgreen")
+                },
+            });
+        });
+    </script>
+</body>
+</html>

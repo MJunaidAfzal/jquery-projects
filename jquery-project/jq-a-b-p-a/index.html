@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>jquery a,p,a,b</title>
+</head>
+<body style="background-color: rgb(227, 245, 227)">
+        <div class="container">
+            <h1 class="text-center mt-4">JQUERY APPEND</h1>
+            <div class="row">
+                <div class="col-md-8">
+            <b id="bold1">THIS IS APPEND</b><br>
+            <button class="btn btn-outline-info mt-4" id="btn1">APPEND CLICK</button>
+        </div>
+        <div class="col-md-4">
+             <ol id="ol1">
+                <li>THIS IS  LIST APPEND</li>
+             </ol><br>
+           
+            <button style="margin-left: 20px;" class="btn btn-outline-primary " id="btn2">APPEND LIST-ITEM</button>
+        </div>
+       
+        
+        <div class="container">
+            <h1 class="text-center mt-4">JQUERY PREPEND</h1>
+            <div class="row">
+                <div class="col-md-8">
+            <b id="bold2">THIS IS PREPEND</b><br>
+            <button class="btn btn-outline-warning mt-4" id="btn3">PREPEND CLICK</button>
+        </div>
+        <div class="col-md-4">
+             <ol id="ol2">
+                <li>THIS IS  LIST PREPEND</li>
+             </ol><br>
+           
+            <button style="margin-left: 20px;" class="btn btn-outline-success " id="btn4">PREPEND LIST-ITEM</button>
+        </div>
+    </div>
+        </div>
+        <div class="container">
+            <h1 class="text-center mt-4">JQUERY AFTER</h1>
+            <div class="row">
+                <div class="col-md-8">
+            <b id="bold3">THIS IS AFTER</b><br>
+            <button class="btn btn-outline-danger mt-4" id="btn5">AFTER CLICK</button>
+        </div>
+        <div class="col-md-4">
+             <ol id="ol3">
+                <li>THIS IS  LIST AFTER</li>
+             </ol><br>
+           
+            <button style="margin-left: 20px;" class="btn btn-outline-dark " id="btn6">AFTER LIST-ITEM</button>
+        </div>
+    </div>
+        </div>
+        <div class="container">
+            <h1 class="text-center mt-4">JQUERY BEFORE</h1>
+            <div class="row">
+                <div class="col-md-8">
+            <b id="bold4">THIS IS BEFORE</b><br>
+            <button class="btn btn-outline-primary mt-4" id="btn7">BEFORE CLICK</button>
+        </div>
+        <div class="col-md-4">
+             <ol id="ol4">
+                <li>THIS IS  LIST BEFORE</li>
+             </ol><br>
+           
+            <button style="margin-left: 20px;" class="btn btn-outline-success " id="btn8">BEFORE LIST-ITEM</button>
+        </div>
+    </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+             $("#btn1").click(function(){
+             $("#bold1").append("<button>Append</button>");
+        });
+                $("#btn2").click(function(){
+                $("#ol1").append("<li> <b> Appended item  </b></li>");
+            });
+            $("#btn3").click(function(){
+             $("#bold2").prepend("<ins>Prepend</ins>");
+        });
+                $("#btn4").click(function(){
+                $("#ol2").prepend("<li> <ins> Prepended item  </ins></li>");
+            });
+            $("#btn5").click(function(){
+             $("#bold3").after("<i>After</i>");
+        });
+                $("#btn6").click(function(){
+                $("#ol3").after("<li> <i> after item  </i></li>");
+            });
+            $("#btn7").click(function(){
+             $("#bold4").before("<del>Before</del>");
+        });
+                $("#btn8").click(function(){
+                $("#ol4").before("<li> <del> Before item  </del></li>");
+            });
+        });
+    </script>
+</body>
+</html>

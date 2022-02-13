@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+        <div class="container">
+            <p>my name is junaid</p>
+            <p class="intro">i am student of 10th</p>
+            <p>today i am doing jquery home work</p>
+            <a href="#">html</a>
+            <a href="#">css</a> <br><br>
+            <p>list group 1</p>
+            <ul>
+                <li>coffee</li>
+                <li>milk</li>
+                <li>tea</li>
+            </ul>
+            <p>list group 2</p>
+            <ul>
+                <li>coffee</li>
+                <li>milk</li>
+                <li>tea</li>
+            </ul>
+            <button id="hide" class="btn-primary">button</button>
+            <button id="th" class="btn-danger">button</button>
+            <button id="intro" class="btn-info">button</button>
+            <button id="hr" class="btn-warning">button</button>
+            <button id="ul" class="btn-success">button</button>
+        </div>
+
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("*").hide();
+            });
+            $("#th").click(function(){
+                $(this).hide();
+            });
+            $("#intro").click(function(){
+                $("p.intro").hide();
+            });
+            $("#hr").click(function(){
+                $("[href]").hide();
+            });
+            $("#ul").click(function(){
+                $("ul li:first").hide();
+            });
+        });
+    </script>
+</body>
+</html>

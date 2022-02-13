@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>jquery animation</title>
+</head>
+<style>
+    body{
+        background: url(assets/img/pexels-photo-1032650.jpeg)no-repeat;
+        background-size: 2000px;
+    }
+</style>
+<body >
+        <div class="container">
+            <h1 class="text-center mt-3">SIMPLE ANIMATE</h1>
+            <button id="btn1" class="btn btn-outline-primary mt-3" style="margin-left: 500px;">Start Animation</button>
+            <div id="div1" style="background:gold;height:150px;width:150px;position:absolute; margin-top:50px;"></div>
+        </div>
+
+        <div class="container" style="margin-top: 230px;">
+            <h1 class="text-center mt-3">OPACITY ANIMATE</h1>
+            <button id="btn2" class="btn btn-outline-warning mt-3" style="margin-left: 500px;">Start Animation</button><br><br>
+            <div id="div2" style="background:black;height:100px;width:100px;position: absolute; margin-top:30px;"></div>
+        </div>
+
+        <div class="container" style="margin-top: 250px;">
+            <h1 class="text-center mt-3">+= ANIMATE</h1>
+            <button id="btn3" class="btn btn-outline-danger mt-3" style="margin-left: 500px;">Start Animation</button><br><br>
+            <div id="div3" style="background:darkred;height:100px;width:100px;position: absolute; margin-top:30px;"></div>
+        </div>
+
+        <div class="container" style="margin-top: 250px;">
+            <h1 class="text-center mt-3">TOGGLE ANIMATE</h1>
+            <button id="btn4" class="btn btn-outline-success mt-3" style="margin-left: 500px;">Start Animation</button><br><br>
+            <div id="div4" style="background:#98bf21;height:200px;width:200px;position: absolute; margin-top:30px; margin-left: 470px;"></div>
+        </div>
+
+        <div class="container" style="margin-top: 250px;">
+            <h1 class="text-center mt-3">ALL TYPES ANIMATE</h1>
+            <button id="btn5" class="btn btn-outline-info mt-3" style="margin-left: 500px;">Start Animation</button><br><br>
+            <div id="div5" style="background:darkblue;height:100px;width:100px;position: absolute; margin-top:30px;margin-left: 400px;"></div>
+        </div>
+
+        <div class="container" style="margin-top: 250px;">
+            <h1 class="text-center mt-3">WRITTEN ANIMATE</h1>
+            <button id="btn6" class="btn btn-outline-dark mt-3" style="margin-left: 500px;">Start Animation</button><br><br>
+            <div id="div6" style="background:skyblue;height:100px;width:250px;position: absolute; margin-top:30px;">WORLD</div>
+        </div>
+
+
+    <script src="assets/js/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#div1").animate({left: '740px'});
+  });
+
+
+
+  $("#btn2").click(function(){
+    $("#div2").animate({
+      left: '720px',
+      opacity: '0.5',
+      height: '200px',
+      width: '200px'
+    });
+  });
+
+  $("#btn3").click(function(){
+    $("#div3").animate({
+      left: '550px',
+      height: '+=100px',
+      width: '+=100px'
+    });
+  });
+
+  $("#btn4").click(function(){
+    $("#div4").animate({
+      height: 'toggle'
+    });
+  });
+
+  $("#btn5").click(function(){
+    var div = $("#div5");
+    div.animate({height: '300px', opacity: '0.4'}, "slow");
+    div.animate({width: '300px', opacity: '0.8'}, "slow");
+    div.animate({height: '100px', opacity: '0.4'}, "slow");
+    div.animate({width: '100px', opacity: '0.8'}, "slow");
+  });
+
+  $("#btn6").click(function(){
+    var div = $("#div6");  
+    div.animate({left: '670px'}, "slow");
+    div.animate({fontSize: '60px'}, "slow");
+  });
+
+});
+
+    </script>
+</body>
+</html>

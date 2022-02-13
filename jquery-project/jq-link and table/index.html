@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+        <div class="container">
+            <p>this is a paragraph</p>
+            <p>this is second paragraph</p>
+            <a href="#" target="_blank">Home</a><br>
+            <a href="#">page</a><br>
+            <button id="world" class="btn btn-warning">Click Here</button>
+            <button id="hello" class="btn btn-danger">Click Here</button>
+            <table id="table1" class="table  my-5">
+                <tr>
+                    <th>s#no</th>
+                    <th>Name</th>
+                    <th>Father Name</th>
+                    <th>Date</th>
+                    <th>D O B</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Zohaib</td>
+                    <td>Afzal</td>
+                    <td>18-12-2021</td>
+                    <td>18 April 2002</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Junaid</td>
+                    <td>Afzal</td>
+                    <td>18-12-2021</td>
+                    <td>16 sep 2005</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Jawaid</td>
+                    <td>Afzal</td>
+                    <td>18-12-2021</td>
+                    <td>22 july 2010</td>
+                </tr>
+            </table>
+            <table id="table2" class="table table-striped  my-5">
+                <tr>
+                    <th>s#no</th>
+                    <th>Name</th>
+                    <th>Father Name</th>
+                    <th>Date</th>
+                    <th>D O B</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Zohaib</td>
+                    <td>Afzal</td>
+                    <td>18-12-2021</td>
+                    <td>18 April 2002</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Junaid</td>
+                    <td>Afzal</td>
+                    <td>18-12-2021</td>
+                    <td>16 sep 2005</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Jawaid</td>
+                    <td>Afzal</td>
+                    <td>18-12-2021</td>
+                    <td>22 july 2010</td>
+                </tr>
+            </table>
+        </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            $("#world").click(function(){
+                $("a[target='_blank']").hide();
+            });
+            $("#hello").click(function(){
+                $(":button").hide();
+            });
+
+            $("#table1 tr:even").css("background-color","yellow");
+            $("#table2 tr:odd").css("background-color","pink");
+
+        });
+
+
+    </script>
+</body>
+</html>
